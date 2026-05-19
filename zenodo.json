@@ -1,0 +1,76 @@
+{
+  "title": "SVG.js: A Lightweight JSON-Driven SVG Icon Rendering Engine for Resource-Constrained Web Environments",
+  "description": "SVG.js is a zero-dependency, client-side SVG icon rendering engine that maps icon identifiers to inline SVG paths through a flat JSON dictionary. Developed and first experimented at Sismadi Lab (sismadi.com) — Experimental Zone, tempat Framework Lahir Sebelum Jadi Produk — owned by PT Sismadi Langit Solusi. Sismadi Lab is an open experimentation space where every framework and tool is tested first, before being elevated to teaching materials or packaged as a finished product. From this lab, three copyright-registered frameworks have been released: Ktupad (2019, EC00201952487), BayamJS (2023, EC00202367008), and DonatJS (2024, EC00202414144). SVG.js is part of the next generation being developed in the same lab.\n\nAll icons are defined as path strings inside a single JavaScript object (svg.path), injected into the DOM via a two-method API: svg.icon() for programmatic string generation and svg.di() for automatic class-based DOM injection using the di-{key} naming convention. The engine eliminates external icon font dependencies and HTTP round-trips, making it suitable for low-bandwidth educational web environments in Indonesia. Theming is fully controlled through CSS custom properties (--pColor, --sColor, --aColor), enabling seamless integration with institutional branding systems. SVG.js ships with an interactive gallery (index.html) supporting live search, four display modes (thumbnail, list, 1x, 2x), and one-click clipboard copy of markup snippets. The library provides 60+ icon paths across UI primitives, social brand identifiers, action controls, and ecosystem identity marks for the DonatJS framework family. All paths conform to a 24x24 viewBox coordinate space.\n\nSismadi Lab pipeline: sismadi.com (ngoprek & proof of concept) -> sismadi.sch.id (curated teaching materials) -> sismadi.co.id (finished products). Nothing goes directly to production without passing through the lab. Framework lineage: Ktupad (EC00201952487, 2019, PHP MVC) -> BayamJS (EC00202367008, 2023, JavaScript MVC) -> DonatJS (EC00202414144, 2024, JSON-driven MVC) -> SVG.js (2024, JSON-driven SVG engine).\n\nThis work is grounded in peer-reviewed research on SVG rendering performance, web accessibility, front-end optimization, and technology adoption in resource-constrained educational environments. Key references: (1) Schwab et al. (2022) demonstrate that SVG — as the dominant markup language for web visualizations — is open, accessible, and customizable via CSS, and fully searchable via the DOM (DOI: 10.1109/TVCG.2021.3059294). (2) Zhang et al. (2023) address automated accessibility optimization for web-based SVG buttons, directly motivating the di-{key} injection pattern (DOI: 10.1016/j.eswa.2023.121883). (3) Riet et al. (2023) provide industrial evidence that reducing HTTP round-trips and front-end asset complexity yields measurable performance gains (DOI: 10.1016/j.jss.2022.111593). (4) Ekpobimi et al. (2024) frame the challenge of front-end performance in heterogeneous device and network environments (DOI: 10.58175/gjarr.2024.2.1.0032). (5) Okai-Ugbaje et al. (2022) establish a framework for mobile and web learning tools in resource-constrained higher education contexts (DOI: 10.1007/s10639-022-11094-5). (6) Kynge (2020) identifies the need for lightweight, offline-capable, locally relevant web content in low-resource educational settings (DOI: 10.2196/16946). (7) Madni et al. (2022) document infrastructure and adoption barriers for e-learning technologies in developing countries including Indonesia (DOI: 10.3389/fpsyg.2022.915596).",
+  "creators": [
+    {
+      "name": "Sismadi, Wawan",
+      "affiliation": "Program Studi Informatika, Universitas IPWIJA, Jakarta, Indonesia; Program Doktor Informatika, Universitas Ahmad Dahlan, Yogyakarta, Indonesia; PT Sismadi Langit Solusi, Bekasi, Indonesia",
+      "orcid": "0009-0007-2685-5663"
+    }
+  ],
+  "license": "MIT",
+  "version": "1.0.0",
+  "upload_type": "software",
+  "publication_date": "2024-01-01",
+  "access_right": "open",
+  "language": "eng",
+  "keywords": [
+    "SVG",
+    "icon library",
+    "JSON-driven rendering",
+    "inline SVG",
+    "web framework",
+    "DonatJS",
+    "Sismadi Lab",
+    "vanilla JavaScript",
+    "zero dependency",
+    "CSS custom properties",
+    "client-side rendering",
+    "icon gallery",
+    "Indonesian web",
+    "educational technology",
+    "low-resource computing",
+    "front-end development",
+    "web performance",
+    "DOM injection",
+    "web accessibility",
+    "PT Sismadi Langit Solusi"
+  ],
+  "related_identifiers": [
+    {
+      "relation": "isSupplementTo",
+      "identifier": "https://github.com/ktupad/svg",
+      "resource_type": "software"
+    },
+    {
+      "relation": "isDerivedFrom",
+      "identifier": "https://github.com/ktupad/donat",
+      "resource_type": "software"
+    },
+    {
+      "relation": "references",
+      "identifier": "https://github.com/ktupad/core",
+      "resource_type": "software"
+    },
+    {
+      "relation": "isRelatedTo",
+      "identifier": "https://sismadi.com",
+      "resource_type": "other"
+    }
+  ],
+  "references": [
+    "Schwab, M., Saffo, D., Bond, N., Sinha, S., Dunne, C., Huang, J., Tompkin, J., & Borkin, M. A. (2022). Scalable Scalable Vector Graphics: Automatic Translation of Interactive SVGs to a Multithread VDOM for Fast Rendering. IEEE Transactions on Visualization and Computer Graphics, 28(9), 3219–3234. DOI: 10.1109/TVCG.2021.3059294",
+    "Zhang, M., Zhang, Y., Gao, G., & Liu, H. (2023). Enhancing accessibility of web-based SVG buttons: An optimization method and best practices. Expert Systems with Applications, 231, 121883. DOI: 10.1016/j.eswa.2023.121883",
+    "Riet, J., Malavolta, I., & Ghaleb, T. (2023). Optimise along the way: An industrial case study on web performance. Journal of Systems and Software, 198, 111593. DOI: 10.1016/j.jss.2022.111593",
+    "Ekpobimi, H. O., Kandekere, R. C., & Fasanmade, A. A. (2024). Conceptual Framework for Enhancing Front-end Web Performance: Strategies and Best Practices. Global Journal of Advanced Research and Reviews, 2(1), 099–107. DOI: 10.58175/gjarr.2024.2.1.0032",
+    "Okai-Ugbaje, S., Ardzejewska, K., & Imran, A. (2022). A mobile learning framework for higher education in resource constrained environments. Education and Information Technologies, 17(7), 3975–3999. DOI: 10.1007/s10639-022-11094-5",
+    "Kynge, L. (2020). Finding the Best Way to Deliver Online Educational Content in Low-Resource Settings: Qualitative Survey Study. Journal of Medical Internet Research, 22(5), e16946. DOI: 10.2196/16946",
+    "Madni, S. H. H., Ali, J., Husnain, H. A., Masum, M. H., Mustafa, S., Shuja, J., Maray, M., & Hosseini, S. (2022). Factors Influencing the Adoption of IoT for E-Learning in Higher Educational Institutes in Developing Countries. Frontiers in Psychology, 13, 915596. DOI: 10.3389/fpsyg.2022.915596"
+  ],
+  "notes": "Konteks Kekayaan Intelektual: SVG.js merupakan bagian dari ekosistem DonatJS (EC00202414144), terdaftar di Direktorat Jenderal Kekayaan Intelektual (DJKI), Republik Indonesia. Silsilah fondasi mencakup Ktupad Core (EC00201952487) dan BayamJS (EC00202367008). Buku referensi terkait: 'Pengembangan Aplikasi Web Modern dengan DonatJS' (P4I, 2024, ISBN 978-623-848-897-1); 'Optimasi Penggunaan SVG dalam Web Development' (P4I, 2025, ISBN 978-623-876-765-6); 'Analisis Mendalam: Batasan Penggunaan AI dalam Pendidikan' (P4I, 2025, ISBN 978-634-726-057-4). SINTA Author ID: 6848496. NIDN: 0816087703. Permohonan paten: S00202503129 (DJKI). Dikembangkan di Sismadi Lab — ruang eksperimen framework perangkat lunak PT Sismadi Langit Solusi (https://sismadi.com).",
+  "communities": [
+    {
+      "identifier": "zenodo"
+    }
+  ]
+}

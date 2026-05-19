@@ -1,0 +1,299 @@
+cff-version: 1.2.0
+message: >-
+  Jika Anda menggunakan perangkat lunak ini dalam penelitian, harap sitasi
+  menggunakan metadata di bawah ini. DOI tersedia via Zenodo setelah rilis
+  repositori. Ganti placeholder DOI dengan yang ditetapkan oleh Zenodo.
+
+title: >-
+  SVG.js: A Lightweight JSON-Driven SVG Icon Rendering Engine
+  for Resource-Constrained Web Environments
+
+abstract: >-
+  SVG.js adalah mesin rendering ikon SVG sisi klien yang zero-dependency,
+  memetakan pengidentifikasi ikon ke jalur SVG inline melalui kamus JSON
+  datar. Dikembangkan di Sismadi Lab (sismadi.com) — Experimental Zone,
+  tempat Framework Lahir Sebelum Jadi Produk, milik PT Sismadi Langit Solusi
+  — SVG.js adalah bagian dari generasi framework yang lahir di lab yang sama
+  dengan Ktupad (2019, EC00201952487), BayamJS (2023, EC00202367008), dan
+  DonatJS (2024, EC00202414144), ketiganya terdaftar sebagai Hak Cipta resmi.
+  Di Sismadi Lab, setiap framework dan tools diuji terlebih dahulu sebelum
+  naik ke bahan ajar atau dikemas jadi produk. SVG.js menyediakan kosakata
+  ikon yang dikurasi dengan 60+ path di ruang koordinat viewBox 24×24,
+  mengeliminasi ketergantungan font eksternal dan overhead HTTP, dengan
+  theming penuh melalui CSS custom properties. Pola injeksi kelas di-{key}
+  yang kompatibel dengan DonatJS memastikan integrasi mulus dengan framework
+  web JSON-driven MVC untuk lingkungan pendidikan Indonesia yang terbatas
+  sumber daya.
+
+authors:
+  - family-names: Sismadi
+    given-names: Wawan
+    orcid: "https://orcid.org/0009-0007-2685-5663"
+    affiliation: >-
+      Program Studi Informatika, Universitas IPWIJA, Jakarta, Indonesia;
+      Program Doktor Informatika, Universitas Ahmad Dahlan,
+      Yogyakarta, Indonesia;
+      PT Sismadi Langit Solusi, Bekasi, Indonesia
+    alias: ktupad
+    email: wawan@sismadi.com
+
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.XXXXXXX"
+    description: >-
+      DOI Zenodo — ganti XXXXXXX dengan DOI aktual yang ditetapkan
+      setelah menerbitkan rilis di GitHub dan menghubungkan ke Zenodo.
+  - type: url
+    value: "https://github.com/ktupad/svg"
+    description: Repositori GitHub
+  - type: url
+    value: "https://sismadi.com"
+    description: >-
+      Sismadi Lab — Experimental Zone, tempat framework lahir sebelum jadi
+      produk. Ruang ngoprek terbuka milik PT Sismadi Langit Solusi.
+
+repository-code: "https://github.com/ktupad/svg"
+url: "https://sismadi.com"
+license: MIT
+version: "1.0.0"
+date-released: "2024-01-01"
+
+type: software
+
+keywords:
+  - SVG
+  - icon library
+  - JSON-driven rendering
+  - web framework
+  - DonatJS
+  - Sismadi Lab
+  - vanilla JavaScript
+  - zero dependency
+  - Indonesian web
+  - educational technology
+  - client-side rendering
+  - inline SVG
+  - CSS custom properties
+  - icon gallery
+  - lightweight
+  - PT Sismadi Langit Solusi
+
+references:
+  - type: software
+    title: "DonatJS: A JSON-Driven MVC Web Framework"
+    authors:
+      - family-names: Sismadi
+        given-names: Wawan
+        orcid: "https://orcid.org/0009-0007-2685-5663"
+    year: 2024
+    url: "https://github.com/ktupad/donat"
+    notes: >-
+      DonatJS (EC00202414144, DJKI) adalah framework JSON-driven MVC yang lahir
+      di Sismadi Lab. SVG.js menyediakan lapisan rendering ikon untuk aplikasi
+      yang dibangun di atas DonatJS.
+
+  - type: software
+    title: "BayamJS: A JavaScript MVC Framework"
+    authors:
+      - family-names: Sismadi
+        given-names: Wawan
+        orcid: "https://orcid.org/0009-0007-2685-5663"
+    year: 2023
+    notes: >-
+      BayamJS (EC00202367008, DJKI) adalah framework MVC JavaScript pendahulu,
+      lahir di Sismadi Lab pada 2023. Bagian dari silsilah generasi
+      Ktupad (2019) → BayamJS (2023) → DonatJS (2024) → SVG.js (2024).
+
+  - type: software
+    title: "Ktupad: An MVC PHP Web Platform"
+    authors:
+      - family-names: Sismadi
+        given-names: Wawan
+        orcid: "https://orcid.org/0009-0007-2685-5663"
+    year: 2019
+    notes: >-
+      Ktupad (EC00201952487, DJKI) adalah framework MVC PHP pertama yang lahir
+      di Sismadi Lab pada 2019 — fondasi awal dari silsilah framework yang
+      berujung pada DonatJS dan SVG.js.
+
+  - type: book
+    title: "Pengembangan Aplikasi Web Modern dengan DonatJS"
+    authors:
+      - family-names: Sismadi
+        given-names: Wawan
+    year: 2024
+    publisher:
+      name: P4I
+    isbn: "978-623-848-897-1"
+    notes: >-
+      Buku referensi yang mendokumentasikan ekosistem DonatJS, tempat
+      SVG.js berfungsi sebagai perpustakaan komponen.
+
+  - type: book
+    title: "Optimasi Penggunaan SVG dalam Web Development"
+    authors:
+      - family-names: Sismadi
+        given-names: Wawan
+    year: 2025
+    publisher:
+      name: P4I
+    isbn: "978-623-876-765-6"
+    notes: >-
+      Buku referensi yang mencakup teknik optimasi SVG yang langsung
+      relevan dengan pendekatan rendering SVG.js.
+
+  - type: book
+    title: "Analisis Mendalam: Batasan Penggunaan AI dalam Pendidikan"
+    authors:
+      - family-names: Sismadi
+        given-names: Wawan
+    year: 2025
+    publisher:
+      name: P4I
+    isbn: "978-634-726-057-4"
+    notes: >-
+      Buku referensi yang membahas batasan dan peluang teknologi AI
+      dalam konteks pendidikan Indonesia.
+
+  - type: article
+    title: >-
+      Scalable Scalable Vector Graphics: Automatic Translation of
+      Interactive SVGs to a Multithread VDOM for Fast Rendering
+    authors:
+      - family-names: Schwab
+        given-names: Michail
+      - family-names: Saffo
+        given-names: David
+      - family-names: Bond
+        given-names: Nicholas
+      - family-names: Sinha
+        given-names: Shash
+      - family-names: Dunne
+        given-names: Cody
+      - family-names: Huang
+        given-names: Jeff
+      - family-names: Tompkin
+        given-names: James
+      - family-names: Borkin
+        given-names: "Michelle A."
+    year: 2022
+    journal: "IEEE Transactions on Visualization and Computer Graphics"
+    volume: 28
+    issue: 9
+    start: 3219
+    end: 3234
+    doi: "10.1109/TVCG.2021.3059294"
+
+  - type: article
+    title: >-
+      Enhancing accessibility of web-based SVG buttons: An optimization
+      method and best practices
+    authors:
+      - family-names: Zhang
+        given-names: Mengxi
+      - family-names: Zhang
+        given-names: Yan
+      - family-names: Gao
+        given-names: Guangyong
+      - family-names: Liu
+        given-names: Huaxiao
+    year: 2023
+    journal: "Expert Systems with Applications"
+    volume: 231
+    pages: 121883
+    doi: "10.1016/j.eswa.2023.121883"
+
+  - type: article
+    title: >-
+      Optimise along the way: An industrial case study on web performance
+    authors:
+      - family-names: Riet
+        given-names: J.
+      - family-names: Malavolta
+        given-names: I.
+      - family-names: Ghaleb
+        given-names: T.
+    year: 2023
+    journal: "Journal of Systems and Software"
+    volume: 198
+    pages: 111593
+    doi: "10.1016/j.jss.2022.111593"
+
+  - type: article
+    title: >-
+      Conceptual Framework for Enhancing Front-end Web Performance:
+      Strategies and Best Practices
+    authors:
+      - family-names: Ekpobimi
+        given-names: "H. O."
+      - family-names: Kandekere
+        given-names: "R. C."
+      - family-names: Fasanmade
+        given-names: "A. A."
+    year: 2024
+    journal: "Global Journal of Advanced Research and Reviews"
+    volume: 2
+    issue: 1
+    start: 99
+    end: 107
+    doi: "10.58175/gjarr.2024.2.1.0032"
+
+  - type: article
+    title: >-
+      A mobile learning framework for higher education in resource
+      constrained environments
+    authors:
+      - family-names: Okai-Ugbaje
+        given-names: S.
+      - family-names: Ardzejewska
+        given-names: K.
+      - family-names: Imran
+        given-names: A.
+    year: 2022
+    journal: "Education and Information Technologies"
+    volume: 17
+    issue: 7
+    start: 3975
+    end: 3999
+    doi: "10.1007/s10639-022-11094-5"
+
+  - type: article
+    title: >-
+      Finding the Best Way to Deliver Online Educational Content in
+      Low-Resource Settings: Qualitative Survey Study
+    authors:
+      - family-names: Kynge
+        given-names: L.
+    year: 2020
+    journal: "Journal of Medical Internet Research"
+    volume: 22
+    issue: 5
+    pages: e16946
+    doi: "10.2196/16946"
+
+  - type: article
+    title: >-
+      Factors Influencing the Adoption of IoT for E-Learning in Higher
+      Educational Institutes in Developing Countries
+    authors:
+      - family-names: Madni
+        given-names: "S. H. H."
+      - family-names: Ali
+        given-names: J.
+      - family-names: Husnain
+        given-names: "H. A."
+      - family-names: Masum
+        given-names: "M. H."
+      - family-names: Mustafa
+        given-names: S.
+      - family-names: Shuja
+        given-names: J.
+      - family-names: Maray
+        given-names: M.
+      - family-names: Hosseini
+        given-names: S.
+    year: 2022
+    journal: "Frontiers in Psychology"
+    volume: 13
+    pages: 915596
+    doi: "10.3389/fpsyg.2022.915596"

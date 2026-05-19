@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SVG Icon Gallery</title>
+<link rel="stylesheet" href="svg.css">
+<style>
+:root {
+  --bg: #f5f4f0;
+  --surface: #ffffff;
+  --text: #1a1a1a;
+  --muted: #888780;
+  --border: rgba(0,0,0,0.09);
+  --radius: 10px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111110;
+    --surface: #1c1c1a;
+    --text: #e8e6df;
+    --border: rgba(255,255,255,0.08);
+  }
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* ── HEADER ── */
+header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 13px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.brand { font-size: 13px; font-weight: bold; letter-spacing: .08em; color: var(--pColor); text-transform: uppercase; }
+.brand span { color: var(--aColor); }
+
+.controls { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+
+input[type="search"] {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 6px 12px;
+  font-family: inherit;
+  font-size: 12px;
+  color: var(--text);
+  outline: none;
+  width: 180px;
+}
+input[type="search"]::placeholder { color: var(--muted); }
+input[type="search"]:focus { border-color: var(--pColor); }
+
+.btn-group { display: flex; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+.btn-group button {
+  background: none; border: none; cursor: pointer;
+  padding: 6px 11px; font-size: 11px; font-family: inherit;
+  color: var(--muted); transition: all .15s; letter-spacing: .05em;
+}
+.btn-group button.active { background: var(--pColor); color: #fff; }
+.btn-group button:not(.active):hover { background: var(--bg); color: var(--text); }
+
+.count { font-size: 11px; color: var(--muted); letter-spacing: .05em; }
+
+/* ── MAIN ── */
+main { padding: 20px; max-width: 1400px; margin: 0 auto; }
+
+/* ── GRID ── */
+#grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  gap: 8px;
+}
+.mode-list  #grid { grid-template-columns: 1fr;                                    gap: 4px;  }
+.mode-zoom1 #grid { grid-template-columns: repeat(auto-fill, minmax(80px,  1fr));  gap: 6px;  }
+.mode-zoom2 #grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));  gap: 10px; }
+
+/* ── CELL ── */
+.cell {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: border-color .15s, transform .15s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  gap: 8px;
+  text-align: center;
+  overflow: hidden;
+}
+.cell:hover { border-color: var(--pColor); transform: translateY(-1px); }
+
+/* neutralize svg.css global rules di dalam cell */
+.cell svg {
+  stroke: var(--pColor) !important;
+  fill: none !important;
+  width: 26px !important;
+  height: 26px !important;
+  filter: none !important;
+  margin: 0;
+  transition: stroke .2s, transform .2s;
+}
+.cell:hover svg { stroke: var(--aColor) !important; transform: scale(1.15); }
+.cell svg path { fill: none !important; }
+
+/* wrapper .di-{key} di dalam cell */
+.cell [class*="di-"] {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  min-width: unset !important;
+}
+
+.cell .name {
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: .06em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+/* ── LIST ── */
+.mode-list .cell { flex-direction: row; justify-content: flex-start; padding: 9px 16px; gap: 12px; border-radius: 8px; }
+.mode-list .cell svg { width: 20px !important; height: 20px !important; flex-shrink: 0; }
+.mode-list .cell .name { font-size: 12px; text-align: left; min-width: 80px; }
+.mode-list .cell .path-preview {
+  font-size: 10px; color: var(--muted);
+  overflow: hidden; text-overflow: ellipsis;
+  white-space: nowrap; flex: 1;
+}
+
+/* ── ZOOM 1x ── */
+.mode-zoom1 .cell svg { width: 22px !important; height: 22px !important; }
+
+/* ── ZOOM 2x ── */
+.mode-zoom2 .cell { padding: 20px; gap: 12px; }
+.mode-zoom2 .cell svg { width: 48px !important; height: 48px !important; }
+.mode-zoom2 .cell .name { font-size: 12px; }
+
+/* ── EMPTY ── */
+.empty { grid-column: 1/-1; text-align: center; padding: 60px 20px; color: var(--muted); font-size: 13px; }
+
+/* ── TOAST ── */
+#toast {
+  position: fixed; bottom: 24px; left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  background: var(--text); color: var(--bg);
+  font-size: 12px; padding: 8px 18px;
+  border-radius: 20px; opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s, transform .2s;
+  z-index: 999;
+}
+#toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">SVG<span>.</span>js</div>
+  <div class="controls">
+    <input type="search" id="search" placeholder="cari ikon…">
+    <div class="btn-group" id="modeGroup">
+      <button class="active" data-mode="thumb">THUMB</button>
+      <button data-mode="list">LIST</button>
+      <button data-mode="zoom1">1×</button>
+      <button data-mode="zoom2">2×</button>
+    </div>
+    <span class="count" id="count"></span>
+  </div>
+</header>
+
+<main>
+  <div id="wrapper" class="mode-thumb">
+    <div id="grid">
+      <!-- contoh penggunaan manual (opsional) -->
+      <!-- <i class="di-facebook"></i> -->
+      <!-- <i class="di-instagram"></i> -->
+      <!-- <i class="di-donat"></i> -->
+    </div>
+  </div>
+</main>
+
+<div id="toast"></div>
+
+<!-- ① eksternal: svg.js -->
+<script src="svg.js"></script>
+
+<!-- ② inisialisasi SVG icons — pola DonatJS standar -->
+<script type="text/javascript">
+if (typeof svg !== 'undefined') svg.di();
+</script>
+
+<!-- ③ gallery logic -->
+<script type="text/javascript">
+(function () {
+
+  var SKIP = { gradien: 1, tmp: 1 };
+  var icons = Object.keys(svg.path).filter(function (k) {
+    return !SKIP[k] && svg.path[k].trim() !== '';
+  });
+
+  var currentMode   = 'thumb';
+  var currentFilter = '';
+  var grid    = document.getElementById('grid');
+  var wrapper = document.getElementById('wrapper');
+  var countEl = document.getElementById('count');
+  var toast   = document.getElementById('toast');
+  var toastTimer;
+
+  /* buat cell dengan <i class="di-{key}"></i> — pola DonatJS */
+  function makeCell(key) {
+    var cell = document.createElement('div');
+    cell.className = 'cell';
+    cell.title = 'Klik salin markup';
+
+    /* icon wrapper — DonatJS pattern */
+    var i = document.createElement('i');
+    i.className = 'di-' + key;
+    cell.appendChild(i);
+
+    /* label nama ikon */
+    var name = document.createElement('span');
+    name.className = 'name';
+    name.textContent = key;
+    cell.appendChild(name);
+
+    /* path preview (hanya mode list) */
+    if (currentMode === 'list') {
+      var preview = document.createElement('span');
+      preview.className = 'path-preview';
+      preview.textContent = svg.path[key].slice(0, 72) + '…';
+      cell.appendChild(preview);
+    }
+
+    /* klik → salin markup siap pakai */
+    cell.addEventListener('click', function () {
+      var snippet = '<i class="di-' + key + '"></i>';
+      copy(snippet);
+      showToast('✓ ' + snippet);
+    });
+
+    return cell;
+  }
+
+  /* render ulang grid */
+  function render() {
+    var q = currentFilter.toLowerCase();
+    var filtered = icons.filter(function (k) { return k.indexOf(q) !== -1; });
+
+    grid.innerHTML = '';
+
+    if (filtered.length === 0) {
+      var empty = document.createElement('div');
+      empty.className = 'empty';
+      empty.textContent = 'Tidak ada ikon "' + currentFilter + '"';
+      grid.appendChild(empty);
+    } else {
+      var frag = document.createDocumentFragment();
+      filtered.forEach(function (k) { frag.appendChild(makeCell(k)); });
+      grid.appendChild(frag);
+      /* inject SVG ke semua .di-{key} yang baru dibuat */
+      svg.di();
+    }
+
+    countEl.textContent = filtered.length + ' ikon';
+  }
+
+  /* ganti mode tampilan */
+  function setMode(mode) {
+    currentMode = mode;
+    wrapper.className = 'mode-' + mode;
+    document.querySelectorAll('#modeGroup button').forEach(function (b) {
+      b.classList.toggle('active', b.dataset.mode === mode);
+    });
+    render();
+  }
+
+  /* clipboard */
+  function copy(txt) {
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(txt).catch(function () {});
+    } else {
+      var ta = document.createElement('textarea');
+      ta.value = txt; document.body.appendChild(ta);
+      ta.select(); document.execCommand('copy');
+      document.body.removeChild(ta);
+    }
+  }
+
+  /* toast */
+  function showToast(msg) {
+    clearTimeout(toastTimer);
+    toast.textContent = msg;
+    toast.classList.add('show');
+    toastTimer = setTimeout(function () { toast.classList.remove('show'); }, 1800);
+  }
+
+  /* events */
+  document.getElementById('search').addEventListener('input', function (e) {
+    currentFilter = e.target.value.trim();
+    render();
+  });
+  document.querySelectorAll('#modeGroup button').forEach(function (btn) {
+    btn.addEventListener('click', function () { setMode(this.dataset.mode); });
+  });
+
+  /* init */
+  setMode('thumb');
+
+})();
+</script>
+
+</body>
+</html>
