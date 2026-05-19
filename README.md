@@ -1,7 +1,7 @@
 # SVG.js
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20282077.svg)](https://doi.org/10.5281/zenodo.20282077)
 [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/ktupad/svg)
 [![Live Demo](https://img.shields.io/badge/demo-live%20preview-blueviolet.svg)](https://bayamjs.github.io/svg/)
 
@@ -229,8 +229,8 @@ If you use SVG.js in academic work, please cite it as:
   title     = {{SVG.js: A Lightweight JSON-Driven SVG Icon Rendering Engine}},
   year      = {2024},
   publisher = {Zenodo},
-  doi       = {10.5281/zenodo.XXXXXXX},
-  url       = {https://github.com/ktupad/svg}
+  doi       = {10.5281/zenodo.20282077},
+  url       = {https://github.com/bayamjs/svg}
 }
 ```
 
