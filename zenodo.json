@@ -19,7 +19,8 @@
     "icon library",
     "JSON-driven rendering",
     "inline SVG",
-    "web framework",
+    "Web Framework",
+    "bayamJS",
     "DonatJS",
     "Sismadi Lab",
     "vanilla JavaScript",
@@ -37,16 +38,6 @@
     "PT Sismadi Langit Solusi"
   ],
   "related_identifiers": [
-    {
-      "relation": "isSupplementTo",
-      "identifier": "https://github.com/ktupad/svg",
-      "resource_type": "software"
-    },
-    {
-      "relation": "isDerivedFrom",
-      "identifier": "https://github.com/ktupad/donat",
-      "resource_type": "software"
-    },
     {
       "relation": "references",
       "identifier": "https://github.com/ktupad/core",
