@@ -1,8 +1,7 @@
 cff-version: 1.2.0
 message: >-
   Jika Anda menggunakan perangkat lunak ini dalam penelitian, harap sitasi
-  menggunakan metadata di bawah ini. DOI tersedia via Zenodo setelah rilis
-  repositori. Ganti placeholder DOI dengan yang ditetapkan oleh Zenodo.
+  menggunakan metadata di bawah ini. 
 
 title: >-
   SVG.js: A Lightweight JSON-Driven SVG Icon Rendering Engine
@@ -30,11 +29,10 @@ authors:
     given-names: Wawan
     orcid: "https://orcid.org/0009-0007-2685-5663"
     affiliation: >-
-      Program Studi Informatika, Universitas IPWIJA, Jakarta, Indonesia;
-      Program Doktor Informatika, Universitas Ahmad Dahlan,
-      Yogyakarta, Indonesia;
-      PT Sismadi Langit Solusi, Bekasi, Indonesia
-    alias: ktupad
+      Program Studi Informatika, Universitas IPWIJA, Bogor, Indonesia;
+      Program Doktor Informatika, Universitas Ahmad Dahlan, Yogyakarta, Indonesia;
+      PT Sismadi Langit Solusi, Jakarta, Indonesia
+    alias: bayamjs
     email: wawan@sismadi.com
 
 identifiers:
@@ -44,7 +42,7 @@ identifiers:
       DOI Zenodo — ganti XXXXXXX dengan DOI aktual yang ditetapkan
       setelah menerbitkan rilis di GitHub dan menghubungkan ke Zenodo.
   - type: url
-    value: "https://github.com/ktupad/svg"
+    value: "https://github.com/bayamjs/svg"
     description: Repositori GitHub
   - type: url
     value: "https://sismadi.com"
@@ -52,7 +50,7 @@ identifiers:
       Sismadi Lab — Experimental Zone, tempat framework lahir sebelum jadi
       produk. Ruang ngoprek terbuka milik PT Sismadi Langit Solusi.
 
-repository-code: "https://github.com/ktupad/svg"
+repository-code: "https://github.com/bayamjs/svg"
 url: "https://sismadi.com"
 license: MIT
 version: "1.0.0"
@@ -64,7 +62,8 @@ keywords:
   - SVG
   - icon library
   - JSON-driven rendering
-  - web framework
+  - Web Framework
+  - BayamJS
   - DonatJS
   - Sismadi Lab
   - vanilla JavaScript
@@ -79,19 +78,6 @@ keywords:
   - PT Sismadi Langit Solusi
 
 references:
-  - type: software
-    title: "DonatJS: A JSON-Driven MVC Web Framework"
-    authors:
-      - family-names: Sismadi
-        given-names: Wawan
-        orcid: "https://orcid.org/0009-0007-2685-5663"
-    year: 2024
-    url: "https://github.com/ktupad/donat"
-    notes: >-
-      DonatJS (EC00202414144, DJKI) adalah framework JSON-driven MVC yang lahir
-      di Sismadi Lab. SVG.js menyediakan lapisan rendering ikon untuk aplikasi
-      yang dibangun di atas DonatJS.
-
   - type: software
     title: "BayamJS: A JavaScript MVC Framework"
     authors:
