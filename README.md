@@ -3,6 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
 [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/ktupad/svg)
+[![Live Demo](https://img.shields.io/badge/demo-live%20preview-blueviolet.svg)](https://bayamjs.github.io/svg/)
 
 A zero-dependency, JSON-driven SVG icon rendering engine for the web.
 
